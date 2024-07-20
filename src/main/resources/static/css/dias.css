@@ -1,0 +1,70 @@
+.horarios-dia {
+    margin-bottom: 20px; /* Añade espacio entre los bloques de horarios */
+    padding: 10px;
+    border: 2px solid #223a66;
+    background-color: #abc9ff; /* Añade un borde alrededor de cada bloque de horarios */
+    border-radius: 2px; /* Redondea los bordes */
+  }
+  
+  .dias-container {
+    margin-bottom: 20px; /* Añade espacio debajo de los botones de días */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  .dias-container button {
+    margin-right: 10px; /* Añade espacio entre los botones de días */
+    flex: 1 1 auto;
+    min-width: 100px; /* Ajusta el tamaño mínimo de los botones */
+    text-align: center;
+    background-color: #223a66; /* Color de fondo inicial del botón */
+    color: white; /* Color del texto del botón */
+    border-color: #223a66; /* Color del borde del botón */
+  }
+  
+  .dias-container button.btn-selected {
+    background-color: #e12454; 
+    color: white;/* Color de fondo del botón seleccionado */
+    border-color: #e12454; /* Color del borde del botón seleccionado */
+  }
+  
+  .horarios-dia button {
+    margin: 5px; /* Añade espacio entre los botones de horarios */
+    padding: 10px 15px; /* Ajusta el relleno de los botones */
+    flex: 1 1 auto;
+    min-width: 100px; /* Ajusta el tamaño mínimo de los botones */
+  }
+  
+  .horarios-dia strong {
+    display: block;
+    margin-bottom: 10px; /* Añade espacio debajo del texto del día */
+  }
+  
+  .btn-round-full1 {
+    border-radius: 10px;
+  }
+
+  .btn-round-full1:hover {
+    background-color: #223a66; /* Color de fondo del botón en hover */
+    color: white !important; /* Color del texto del botón en hover */
+    border-color: #223a66; /* Color del borde del botón en hover */
+  }
+  
+  .btn-round-full2 {
+    border-radius: 10px;
+  }
+
+  
+  .btn-round-full2 {
+    background-color: #223a66; /* Color de fondo del botón en hover */
+    color: white !important; /* Color del texto del botón en hover */
+    border-color: #223a66; /* Color del borde del botón en hover */
+  }
+
+
+  .btn-round-full2:hover {
+    background-color: #e12454; /* Color de fondo del botón en hover */
+    color: white !important; /* Color del texto del botón en hover */
+    border-color: #e12454; /* Color del borde del botón en hover */
+  }

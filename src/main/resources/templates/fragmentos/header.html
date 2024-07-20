@@ -1,0 +1,70 @@
+<header>
+	<div class="header-top-bar">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<ul class="top-bar-info list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@novena.com</a></li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Av. Nicolás Ayllón con, Ate 15487, Perú</li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
+						<a href="tel:+23-345-67890" >
+							<span>Llamar ahora : </span>
+							<span class="h4">+51 903355765</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navigation" id="navbar">
+		<div class="container">
+		 	 <a class="navbar-brand" href="index.html">
+			  	<img src="/images/logo.png" alt="" class="img-fluid">
+			  </a>
+
+		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icofont-navigation-menu"></span>
+		  </button>
+	  
+		  <div class="collapse navbar-collapse" id="navbarmain">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="/">Inicio</a>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+			    <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+
+			    <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+			  	</li>
+
+			  	<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctores</a>
+			  	</li>
+				  <li class="nav-item" th:if="${session.loggedInUser != null}">
+					<a class="nav-link" href="/reservas">Citas</a>
+				</li>
+				<li class="nav-item" th:if="${session.loggedInUser != null}">
+					<div class="user-info dropdown">
+						<a href="#" class="nav-link dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="icofont-user-alt-4 mr-2"></i>
+							<span th:text="${session.loggedInPaciente.nombres} + ' ' + ${session.loggedInPaciente.apellidos}"></span>
+							<i class="icofont-rounded-down ml-2"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+							<a class="dropdown-item" href="/logout">Cerrar Sesión</a>
+						</div>
+					</div>
+				</li>
+				
+				<li class="nav-item" th:unless="${session.loggedInUser != null}">
+					<a href="/login" class="btn btn-main btn-round-full">Iniciar Sesión</a>
+				</li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+</header>
